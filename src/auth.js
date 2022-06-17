@@ -16,7 +16,7 @@ app.get("/auth", async (req, res) => {
 	const json = await vReq.json();
 	
 	if (json.valid) {
-		const sessionId = crypto.randomUUID();
+		const sessionId = crypto.randomBytes(32).toString("hex");
 		delete sessions.find(v => v.username === json.username);
 		
 		const account = await createAccount(json.username);

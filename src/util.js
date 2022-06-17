@@ -3,13 +3,8 @@
 const {data} = require("./db.js");
 
 function castString(v) {
-	let done = v ?? "";
+	let done = v ? v : "";
 	return done.toString();
 }
-function fixLevelIds() {
-	for (const id in data.levels) {
-		data.levels[id].id = id;
-	}
-}
 
-module.exports = {castString, fixLevelIds};
+module.exports = {castString};

@@ -8,11 +8,4 @@ console.log("                  (WIP)                  \n");
 
 require("./src/paths.js");
 
-//Just to be safe
-const {fixLevelIds} = require("./src/util.js");
-const {commitToDb} = require("./src/db.js");
-
-fixLevelIds();
-commitToDb();
-
 appListen();

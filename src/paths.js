@@ -4,7 +4,7 @@ const {app} = require("./app.js");
 
 app.get("/", (req, res) => {
 	console.log("Request to homepage")
-	res.send("Starting over");
+	res.end();
 });
 
 require("./levels.js");
